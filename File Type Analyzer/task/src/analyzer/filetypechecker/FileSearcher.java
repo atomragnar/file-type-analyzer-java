@@ -76,7 +76,7 @@ public class FileSearcher {
 
         if (listOfFiles != null) {
 
-            int poolSize = 4;
+            int poolSize = Runtime.getRuntime().availableProcessors();
             ExecutorService executor = Executors.newFixedThreadPool(poolSize);
             for (int i = 0; i < listOfFiles.length; i++) {
 
